@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+
+        body
+        {
+            height: 100vh;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box
+        {
+            width: 1000px;
+            height: 500px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+        }
+        .picname img
+        {
+            margin:10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .picname p
+        {
+            margin:10px;
+            font-size: 50px;
+        }
+
+        .about
+        {
+            padding:50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 40px;
+            color: gray;
+        }
+
+        .button
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .button button
+        {
+            padding: 20px 50px;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: 640px)
+        {
+        body
+        {
+            height: 100vh;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box
+        {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .picname img
+        {
+            margin-top:10px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 0;
+            height:160px;
+        }
+
+        .picname p
+        {
+            margin:0px;
+            font-size: 30px;
+        }
+
+        .about
+        {
+            text-align: center;
+            font-size: 25px;
+            color: gray;
+        }
+
+        .button
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button button
+        {
+            padding: 5px 130px;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="picname">
+            <img class="pic" src="https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg" alt="Photo" height="300px">
+            <p><br><strong>Rahul Verma</strong></p>
+        </div>
+        <div class="about">
+                <p>Web Designer and JavaScript Enthusiast.<br>
+                Loves clean, creative layouts and good coffee!</p>
+            <div class="button">
+                <button>Contact</button>
+                <button>Portfolio</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            
+            height:1000px;
+            width:1200px;
+            padding:10px;
+            background-color: orange;
+            display:grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .box
+        {
+            border: 2px solid red;
+        }
+        #blk
+        {
+            background-color: purple;
+            grid-column: 1/4;
+        }
+        #one
+        {
+            background-color: green;
+            grid-row: 2/4;
+            margin-right: 10px;
+        }
+        #two
+        {
+            background-color: blue;
+        }
+        #three
+        {
+            background-color: black;
+            grid-row: 2/4;
+            grid-column: 3/4;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="blk"></div>
+        <div class="box" id="one"></div>
+        <div class="box" id="two"></div>
+        <div class="box" id="three"></div>
+        <div class="box" id="two"></div>
+    </div>
+</body>
+</html>
