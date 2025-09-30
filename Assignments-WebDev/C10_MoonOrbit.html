@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .earth
+        {
+            height: 100px;
+            width: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg') no-repeat center/cover;
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.8);
+            border-radius: 50%;
+        }
+        .orbit
+        {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: spin 4s linear infinite;
+        }
+        .moon
+        {
+            height: 20px;
+            width: 20px;
+            background: url('https://hdr-astrophotography.com/wp-content/uploads/2018/06/fullmoon12.png?w=740') no-repeat center/cover;
+            box-shadow: 0 0 30px rgba(212, 224, 233, 0.8);
+            border-radius: 50%;
+        }
+
+        @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    </style>
+</head>
+<body>
+    <div class="earth">
+        <div class="orbit">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>
