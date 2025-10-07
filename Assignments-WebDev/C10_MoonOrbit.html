@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* center the content and set black background */
         body
         {
             background-color: black;
@@ -13,14 +14,18 @@
             justify-content: center;
             align-items: center;
         }
+
+        /* Earth styling */
         .earth
         {
             height: 100px;
             width: 100px;
             background: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg') no-repeat center/cover;
-            box-shadow: 0 0 30px rgba(0, 150, 255, 0.8);
-            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.8); /* glowing effect */
+            border-radius: 50%; /* make it circular */
         }
+
+        /* orbit container for the moon */
         .orbit
         {
             position: absolute;
@@ -29,26 +34,32 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite; /* rotate around earth */
         }
+
+        /* moon styling */
         .moon
         {
             height: 20px;
             width: 20px;
             background: url('https://hdr-astrophotography.com/wp-content/uploads/2018/06/fullmoon12.png?w=740') no-repeat center/cover;
-            box-shadow: 0 0 30px rgba(212, 224, 233, 0.8);
-            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(212, 224, 233, 0.8); /* glowing effect */
+            border-radius: 50%; /* circular shape */
         }
 
+        /* animation for orbit rotation */
         @keyframes spin {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to   { transform: translate(-50%, -50%) rotate(360deg); }
-    }
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to   { transform: translate(-50%, -50%) rotate(360deg); }
+        }
     </style>
 </head>
 <body>
+    <!-- Earth container -->
     <div class="earth">
+        <!-- orbit around the Earth -->
         <div class="orbit">
+            <!-- Moon rotating around Earth -->
             <div class="moon"></div>
         </div>
     </div>

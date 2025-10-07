@@ -6,6 +6,7 @@
     <title>Profile Card</title>
     <style>
 
+        /* body styling */
         body
         {
             height: 100vh;
@@ -14,6 +15,8 @@
             justify-content: center;
             align-items: center;
         }
+
+        /* main profile card container */
         .box
         {
             width: 1000px;
@@ -23,6 +26,8 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             display: flex;
         }
+
+        /* profile image styling */
         .picname img
         {
             margin:10px;
@@ -30,12 +35,14 @@
             border-bottom-right-radius: 20px;
         }
 
+        /* profile name styling */
         .picname p
         {
             margin:10px;
             font-size: 50px;
         }
 
+        /* about section styling */
         .about
         {
             padding:50px;
@@ -47,6 +54,7 @@
             color: gray;
         }
 
+        /* buttons container */
         .button
         {
             display: flex;
@@ -56,6 +64,7 @@
             gap: 30px;
         }
 
+        /* individual buttons styling */
         .button button
         {
             padding: 20px 50px;
@@ -65,77 +74,82 @@
             font-size: 20px;
         }
 
+        /* responsive design for small screens */
         @media only screen and (max-width: 640px)
         {
-        body
-        {
-            height: 100vh;
-            background-color: aliceblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box
-        {
-            width: 400px;
-            height: 600px;
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
+            body
+            {
+                height: 100vh;
+                background-color: aliceblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-        .picname img
-        {
-            margin-top:10px;
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 0;
-            height:160px;
-        }
+            .box
+            {
+                width: 400px;
+                height: 600px;
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
 
-        .picname p
-        {
-            margin:0px;
-            font-size: 30px;
-        }
+            .picname img
+            {
+                margin-top:10px;
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 0;
+                height:160px;
+            }
 
-        .about
-        {
-            text-align: center;
-            font-size: 25px;
-            color: gray;
-        }
+            .picname p
+            {
+                margin:0px;
+                font-size: 30px;
+            }
 
-        .button
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+            .about
+            {
+                text-align: center;
+                font-size: 25px;
+                color: gray;
+            }
 
-        .button button
-        {
-            padding: 5px 130px;
-            background-color: cornflowerblue;
-            color: white;
-            border-radius: 10px;
-            font-size: 20px;
-        }
+            .button
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .button button
+            {
+                padding: 5px 130px;
+                background-color: cornflowerblue;
+                color: white;
+                border-radius: 10px;
+                font-size: 20px;
+            }
         }
 
     </style>
 </head>
 <body>
+    <!-- profile card container -->
     <div class="box">
+        <!-- image and name section -->
         <div class="picname">
             <img class="pic" src="https://ongcvidesh.com/wp-content/uploads/2019/08/dummy-image.jpg" alt="Photo" height="300px">
             <p><br><strong>Rahul Verma</strong></p>
         </div>
+        <!-- about section with description and buttons -->
         <div class="about">
                 <p>Web Designer and JavaScript Enthusiast.<br>
                 Loves clean, creative layouts and good coffee!</p>

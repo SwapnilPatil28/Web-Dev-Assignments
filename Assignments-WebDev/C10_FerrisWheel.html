@@ -4,120 +4,88 @@
     <meta charset="UTF-8">
     <title>Ferris Wheel</title>
   <style>
+    /* remove default margin */
     body {
-  margin: 0;
-}
+      margin: 0;
+    }
 
+    /* main wheel styling and rotation animation */
     .wheel {
-  border: 4px solid #2c3e50;
-  background: rgba(255,255,255,0.02);
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 60px;
-  transform: translateX(-50%);
-  width: 320px; 
-  height: 320px;
-  max-width: 90vw;
-  max-height: 90vw;
-  animation-name: wheel;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
+      border: 4px solid #2c3e50;
+      background: rgba(255,255,255,0.02);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 60px;
+      transform: translateX(-50%);
+      width: 320px; 
+      height: 320px;
+      max-width: 90vw;
+      max-height: 90vw;
+      animation-name: wheel;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
 
-.line {
-  background-color: #34495e;
-  width: 50%;
-  height: 3px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: 0% 0%;
-}
+    /* spokes of the wheel */
+    .line {
+      background-color: #34495e;
+      width: 50%;
+      height: 3px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0% 0%;
+    }
 
-.line:nth-of-type(2) {
-  transform: rotate(60deg);
-}
-.line:nth-of-type(3) {
-  transform: rotate(120deg);
-}
-.line:nth-of-type(4) {
-  transform: rotate(180deg);
-}
-.line:nth-of-type(5) {
-  transform: rotate(240deg);
-}
-.line:nth-of-type(6) {
-  transform: rotate(300deg);
-}
+    /* rotate each spoke */
+    .line:nth-of-type(2) { transform: rotate(60deg); }
+    .line:nth-of-type(3) { transform: rotate(120deg); }
+    .line:nth-of-type(4) { transform: rotate(180deg); }
+    .line:nth-of-type(5) { transform: rotate(240deg); }
+    .line:nth-of-type(6) { transform: rotate(300deg); }
 
-.block {
-  background-color: #1abc9c; 
-  width: 20%;
-  height: 20%;
-  position: absolute;
-  border: 2px solid #16a085;
-  border-radius: 6px;
-  transform-origin: 50% 0%;
-  animation: blocks 10s ease-in-out infinite;
-}
+    /* blocks or cabins on the wheel */
+    .block {
+      background-color: #1abc9c; 
+      width: 20%;
+      height: 20%;
+      position: absolute;
+      border: 2px solid #16a085;
+      border-radius: 6px;
+      transform-origin: 50% 0%;
+      animation: blocks 10s ease-in-out infinite;
+    }
 
-.block:nth-of-type(1) {
-  right: -8.5%;
-  top: 50%;
-}
-.block:nth-of-type(2) {
-  right: 17%;
-  top: 93.5%;
-}
-.block:nth-of-type(3) {
-  right: 67%;
-  top: 93.5%;
-}
-.block:nth-of-type(4) {
-  left: -8.5%;
-  top: 50%;
-}
-.block:nth-of-type(5) {
-  left: 17%;
-  top: 7%;
-}
-.block:nth-of-type(6) {
-  right: 17%;
-  top: 7%;
-}
+    /* position each block around the wheel */
+    .block:nth-of-type(1) { right: -8.5%; top: 50%; }
+    .block:nth-of-type(2) { right: 17%; top: 93.5%; }
+    .block:nth-of-type(3) { right: 67%; top: 93.5%; }
+    .block:nth-of-type(4) { left: -8.5%; top: 50%; }
+    .block:nth-of-type(5) { left: 17%; top: 7%; }
+    .block:nth-of-type(6) { right: 17%; top: 7%; }
 
-@keyframes wheel {
-   0% {
-     transform: translateX(-50%) rotate(0deg);
-   }
-   100% {
-     transform: translateX(-50%) rotate(360deg);
-   }
-}
+    /* wheel rotation animation keyframes */
+    @keyframes wheel {
+       0% { transform: translateX(-50%) rotate(0deg); }
+       100% { transform: translateX(-50%) rotate(360deg); }
+    }
 
-@keyframes blocks {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    background-color: #f39c12;
-  }
-  50% {
-    background-color: #9b59b6;
-  }
-  75% {
-    background-color: #3498db;
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-    </style>
+    /* block rotation and color change animation */
+    @keyframes blocks {
+      0% { transform: rotate(0deg); }
+      25% { background-color: #f39c12; }
+      50% { background-color: #9b59b6; }
+      75% { background-color: #3498db; }
+      100% { transform: rotate(-360deg); }
+    }
+  </style>
   </head>
   <body>
+    <!-- ferris wheel container -->
     <div class="wheel">
+      <!-- spokes of the wheel -->
       <span class="line"></span>
       <span class="line"></span>
       <span class="line"></span>
@@ -125,6 +93,7 @@
       <span class="line"></span>
       <span class="line"></span>
 
+      <!-- cabins or blocks attached to the wheel -->
       <div class="block"></div>
       <div class="block"></div>
       <div class="block"></div>

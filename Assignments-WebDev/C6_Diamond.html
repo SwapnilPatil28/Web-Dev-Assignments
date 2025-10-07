@@ -5,26 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diamond</title>
   <style>
+    /* upper triangle of the diamond */
     .one {
-        width: 0;
-        height: 0;
-        border-left: 50px solid transparent;
-        border-right: 50px solid transparent;
-        border-bottom: 100px solid rgb(4, 172, 149);
-        margin:auto;
+        width: 0; /* no actual width */
+        height: 0; /* no actual height */
+        border-left: 50px solid transparent; /* left transparent edge */
+        border-right: 50px solid transparent; /* right transparent edge */
+        border-bottom: 100px solid rgb(4, 172, 149); /* bottom colored edge forming triangle */
+        margin: auto; /* center the shape horizontally */
     }
+
+    /* lower triangle of the diamond */
     .two {
         width: 0;
         height: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-top: 100px solid rgb(4, 172, 149);
-        margin:auto;
+        border-top: 100px solid rgb(4, 172, 149); /* top colored edge forming inverted triangle */
+        margin: auto;
     }
   </style>
 </head>
 <body>
+  <!-- upper triangle -->
   <div class="one"></div>
+
+  <!-- lower triangle -->
   <div class="two"></div>
 </body>
 </html>

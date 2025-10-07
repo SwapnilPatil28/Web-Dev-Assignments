@@ -5,58 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid</title>
     <style>
+        /* center the grid container on the page */
         body
         {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
+        /* main grid container */
         .container
         {
-            
             height:1000px;
             width:1200px;
             padding:10px;
             background-color: orange;
             display:grid;
             /* grid-template-columns: repeat(3, 1fr); */
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+            grid-template-rows: 1fr 1fr 1fr; /* 3 rows */
         }
+
+        /* individual grid boxes */
         .box
         {
-            border: 2px solid red;
+            border: 2px solid red; /* outline each box */
         }
+
+        /* top full-width box */
         #blk
         {
             background-color: purple;
-            grid-column: 1/4;
+            grid-column: 1/4; /* spans all 3 columns */
         }
+
+        /* left middle column box */
         #one
         {
             background-color: green;
-            grid-row: 2/4;
-            margin-right: 10px;
+            grid-row: 2/4; /* spans 2 rows */
+            margin-right: 10px; /* spacing to the next box */
         }
+
+        /* middle box */
         #two
         {
             background-color: blue;
         }
+
+        /* right middle column box */
         #three
         {
             background-color: black;
-            grid-row: 2/4;
-            grid-column: 3/4;
-            margin-left: 10px;
+            grid-row: 2/4; /* spans 2 rows */
+            grid-column: 3/4; /* placed in last column */
+            margin-left: 10px; /* spacing from left box */
         }
     </style>
 </head>
 <body>
+    <!-- grid container holding all boxes -->
     <div class="container">
+        <!-- top full-width box -->
         <div class="box" id="blk"></div>
+        <!-- left middle box spanning 2 rows -->
         <div class="box" id="one"></div>
+        <!-- center box -->
         <div class="box" id="two"></div>
+        <!-- right middle box spanning 2 rows -->
         <div class="box" id="three"></div>
+        <!-- bottom box -->
         <div class="box" id="two"></div>
     </div>
 </body>
