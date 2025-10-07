@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Ferris Wheel</title>
-    <style>
-        .wheel {
-  border: 2px solid black;
+  <style>
+    body {
+  margin: 0;
+}
+
+    .wheel {
+  border: 4px solid #2c3e50;
+  background: rgba(255,255,255,0.02);
   border-radius: 50%;
-  margin-left: 50px;
   position: absolute;
-  height: 55vw;
-  width: 55vw;
-  max-width: 500px;
-  max-height: 500px;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  width: 320px; 
+  height: 320px;
+  max-width: 90vw;
+  max-height: 90vw;
   animation-name: wheel;
   animation-duration: 10s;
   animation-iteration-count: infinite;
@@ -20,9 +27,9 @@
 }
 
 .line {
-  background-color: black;
+  background-color: #34495e;
   width: 50%;
-  height: 2px;
+  height: 3px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,11 +53,12 @@
 }
 
 .block {
-  background-color: red;
+  background-color: #1abc9c; 
   width: 20%;
   height: 20%;
   position: absolute;
-  border: 2px solid;
+  border: 2px solid #16a085;
+  border-radius: 6px;
   transform-origin: 50% 0%;
   animation: blocks 10s ease-in-out infinite;
 }
@@ -82,10 +90,10 @@
 
 @keyframes wheel {
    0% {
-     transform: rotate(0deg);
+     transform: translateX(-50%) rotate(0deg);
    }
    100% {
-     transform: rotate(360deg);
+     transform: translateX(-50%) rotate(360deg);
    }
 }
 
@@ -94,10 +102,13 @@
     transform: rotate(0deg);
   }
   25% {
-    background-color: yellow;
+    background-color: #f39c12;
   }
   50% {
-    background-color: purple;
+    background-color: #9b59b6;
+  }
+  75% {
+    background-color: #3498db;
   }
   100% {
     transform: rotate(-360deg);
